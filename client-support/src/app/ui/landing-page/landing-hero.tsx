@@ -24,7 +24,7 @@ export default function LandingHero() {
             >
             </Image>
             <div className="text-white">
-                <h1 className="text-h1">We're more than an answering service</h1>
+                <h1 className="text-h2 ">We're more than an answering service</h1>
                 <p>Answering Legal has everything you need to make sure your firm never misses another opportunity.</p>
                 <div>
                     <h3>Excellent 4.84</h3>

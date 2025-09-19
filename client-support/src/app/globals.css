@@ -11,13 +11,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --text-h1: 64pt;
+  --text-h1--font-weight: 700;
   --text-h2: 32pt;
+  --text-h2--font-weight: 700;
   --text-h3: 24pt;
   --text-sub1: 24pt;
   --text-sub2: 16pt;
   --text-b1: 16pt;
   --text-b2: 20pt;
-
+  --text-s1: 12pt;
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,5 +32,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Helvetica, sans-serif;
 }
