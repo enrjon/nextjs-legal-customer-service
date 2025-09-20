@@ -20,8 +20,8 @@ export default function Cards() {
     ]
 
     return (
-        <div>
-            <h3 className="text-white">Here's what we can do for your law firm</h3>
+        <div className="flex justify-center flex-wrap">
+            <h3 className="text-white flex w-full">Here&apos;s what we can do for your law firm</h3>
             <div className="flex">
                 {
                     cards.map((card, i) => {

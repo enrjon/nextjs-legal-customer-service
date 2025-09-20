@@ -16,7 +16,7 @@ export const geistMono = Geist_Mono({
 export const montserrat = Montserrat({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  weight: ['400', '700'],
+  weight: ['400', '600', '700'],
 })
 
 export const metadata: Metadata = {

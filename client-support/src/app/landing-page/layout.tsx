@@ -10,14 +10,14 @@ import Footer from '../ui/landing-page/footer';
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="">
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-center">
         <TopNav />
         <LandingHero />
         <Cards />
         <CRM />
         <Intake />
         <Blog />
-        <Form />
+        <Form></Form>
         <Footer />
       </div>
       {/* <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div> */}
