@@ -13,16 +13,16 @@ export default function Blog() {
     )
 
     return (
-        <div className="bg-white flex flex-col">
-            <h2 className="text-h2">Want to learn more? Read our articles on legal intake.</h2>
-            <div className="flex flex-row">
+        <div className="bg-white flex flex-col ">
+            <h2 className="flex text-h3 font-bold flex justify-center">Want to learn more? Read our articles on legal intake.</h2>
+            <div className="flex flex-row justify-center">
                 {
                     blogFetch.map((data, i) => {
                         return <BlogCard key={`blog-card-${i}`} {...data} />
                     })
                 }
             </div>
-            <button className="btn">Go to blog</button>
+            <button className="btn flex justify-center">Go to blog</button>
         </div>
 
     )

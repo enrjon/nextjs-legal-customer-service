@@ -10,7 +10,7 @@ export default function TopNav() {
     const [collapse, setCollapse] = useState(true);
 
     return (
-        <nav className="flex inline-flex justify-between">
+        <nav className="flex inline-flex justify-between bg-white ">
             <Image
                 src='/images/Answering_LegalTM_Blue.png'
                 width={300}
