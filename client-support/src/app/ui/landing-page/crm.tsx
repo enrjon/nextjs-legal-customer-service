@@ -2,27 +2,39 @@ import Image from "next/image"
 import crmImage from '/images/CRM-Graphic/png'
 
 export default function CRM(){
+    const crmList = [
+                            'Answering Legal’s receptionists take down exactly the information you need.',
+                            'Through native API integrations with our proprietary software, we make sure it’s immediately where you need it to be.',
+                            'All you’ll have to do is open your CRM and follow up to secure your new client’s business.',
+                        ]
     return (
-        <div className="flex bg-white">
+        <div className="flex bg-white justify-center">
             <Image
                 src='/images/CRM-Graphic.png'
                 width={534}
                 height={453}
-                style={{
-                    width: '30%',
-                    height: 'auto',
-                }}  
+                
                 alt="image of CRM messaging being utilized."
             ></Image>
-            <div>
-                <h2>Your data’s in good hands</h2>
+            <div className="w-110">
+                <h2 className="text-h3 font-bold">Your data’s in good hands</h2>
                 <h4>Our partnership with your CRM enables a seamless flow of information.</h4>
                 <ul>
-                    <li>Answering Legal’s receptionists take down exactly the information you need.</li>
-                    <li>Through native API integrations with our proprietary software, we make sure it’s immediately where you need it to be.</li>
-                    <li>All you’ll have to do is open your CRM and follow up to secure your new client’s business.</li>
+                    {
+                        
+                        crmList.map((li, i)=>{
+                            return <div key={i}>
+                                <Image 
+                                    src="/images/checkmark.svg"
+                                    width={32}
+                                    height={32}
+                                    alt="Blue circle with white checkmark" />
+                                    {li}
+                                </div>
+                        })
+                    }
                 </ul>
-                <button className="bg-blue-500 rounded">See our Pricing</button>
+                <button className="btn">See our Pricing</button>
             </div>
         </div>
     )

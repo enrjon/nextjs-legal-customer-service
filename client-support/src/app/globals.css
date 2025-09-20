@@ -34,3 +34,14 @@ body {
   color: var(--foreground);
   font-family: Montserrat, Helvetica, sans-serif;
 }
+
+.btn {
+  min-width: 154px;
+  min-height: 49px;
+  border-radius: 12px;
+  padding: 16px 24px;
+  color: #ffffff;
+  background-color: #0360E6;
+  font-weight: 600;
+;
+}
