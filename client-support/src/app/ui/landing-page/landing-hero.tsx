@@ -4,12 +4,16 @@ import Image from "next/image"
 
 export default function LandingHero() {
     return (
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-items-center">
             <Image
                 src='/images/LandingHero.jpg'
                 alt='Landing Page Hero image'
-                height={100}
-                width={2000}           
+                width={10000}
+                height={10000}
+                style={{
+                    width: '100%',
+                    height: 'auto',
+                }}         
                 className="-z-10 hidden md:inline-flex fixed"
                 objectFit={'contain'}
             >
@@ -17,8 +21,12 @@ export default function LandingHero() {
             <Image
                 src='/images/LandingHeroMobile.jpg'
                 alt='Landing Page Hero image for mobile'
-                height={100}
-                width={2000} 
+                width={10000}
+                height={10000}
+                style={{
+                    width: 'auto',
+                    height: '100%',
+                }}  
                 objectFit={'contain'}
                 className="-z-10 inline-flex md:hidden"
             >

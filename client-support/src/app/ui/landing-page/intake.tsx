@@ -14,7 +14,7 @@ export default function Intake() {
                 width={10}
                 height={10}
                 style={{
-                    width: '100%',
+                    width: '40%',
                     height: 'auto',
                 }}
                 alt="Receptionist answering phone"

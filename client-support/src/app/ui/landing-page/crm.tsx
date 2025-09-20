@@ -6,8 +6,12 @@ export default function CRM(){
         <div className="flex bg-white">
             <Image
                 src='/images/CRM-Graphic.png'
-                width={500}
-                height={100}
+                width={534}
+                height={453}
+                style={{
+                    width: '30%',
+                    height: 'auto',
+                }}  
                 alt="image of CRM messaging being utilized."
             ></Image>
             <div>
