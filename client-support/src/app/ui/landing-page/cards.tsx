@@ -25,7 +25,7 @@ export default function Cards() {
             <div className="flex gap-[32px]">
                 {
                     cards.map((card, i) => {
-                        return <div key={`card-${i}`} className="card bg-white flex flex-col px-[16px] py-[32px] justify-between">
+                        return <div key={`card-${i}`} className="card px-[16px] py-[32px] justify-between">
                             <Image
                                 src={card.image}
                                 width={100}

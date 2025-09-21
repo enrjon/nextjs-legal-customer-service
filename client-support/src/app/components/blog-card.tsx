@@ -13,20 +13,34 @@ interface Blog {
 
 export default function BlogCard(blogData: Blog) {
     return (
-        <div className="bg-white rounded md:w-100 ">
-            <Image
-                src={blogData.img}
-                width={320}
-                height={193}
-                alt="Man talking on phone"
-            />
-            <h5>{blogData.section}</h5>
-            <time >{blogData.date}</time>
-            <h4>{blogData.title}</h4>
-            <p>{blogData.content}</p>
-            <Link
-                href={''}
-            >[Read More{`>`}]</Link>
+        <div>
+            <div className="card gap-[8px] p-[16px]">
+                <Image
+                    src={blogData.img}
+                    width={320}
+                    height={193}
+                    alt="Man talking on phone"
+                    className="rounded-[20px]"
+                    style={{
+                        objectFit: 'contain'
+                    }}
+                />
+                <h5 className="self-start text-sub2">{blogData.section}</h5>
+                <div className="gap-[16px] flex">
+                    <div className="w-[2px] h-full bg-blue-500 rounded-[15px]"></div>
+                    <div className="gap-[12px]">
+                        <time className=" text-sub2">{blogData.date}</time>
+                        <h4 className=" text-sub1 font-semibold">{blogData.title}</h4>
+                    </div>
+
+                </div>
+                <p className="overflow-hidden text-ellipsis text-b1">{blogData.content}</p>
+                <Link
+                    href={''}
+                    className="self-start"
+                >[Read More{`>`}]</Link>
+            </div>
         </div>
+
     )
 }
