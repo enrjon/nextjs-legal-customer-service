@@ -20,21 +20,21 @@ export default function Cards() {
     ]
 
     return (
-        <div className="flex justify-center flex-wrap">
-            <h3 className="text-white flex w-full">Here&apos;s what we can do for your law firm</h3>
-            <div className="flex">
+        <div className="flex justify-center flex-wrap gap-[36px]">
+            <h3 className="text-h3 font-bold text-white flex">Here&apos;s what we can do for your law firm</h3>
+            <div className="flex gap-[32px]">
                 {
                     cards.map((card, i) => {
-                        return <div key={`card-${i}`} className="bg-white rounded grid justify-items-stretch">
+                        return <div key={`card-${i}`} className="card bg-white flex flex-col px-[16px] py-[32px] justify-between">
                             <Image
                                 src={card.image}
                                 width={100}
                                 height={100}
                                 alt={`${card.label} vector image`}
-                                className="flex justify-self-center"
+                                className="flex"
                             ></Image>
-                            <h2>{card.label}</h2>
-                            <div className="w-full h-1 bg-blue-500"></div>
+                            <h2 className="text-h3 text-center font-bold">{card.label}</h2>
+                            <div className="w-full h-1 bg-blue-300"></div>
                             <p>{card.description}</p>
                         </div>
                     })

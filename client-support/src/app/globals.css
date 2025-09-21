@@ -42,3 +42,10 @@ body {
   font-weight: 600;
 ;
 }
+.card {
+  height: 471px;
+  width: 352px;
+  border-radius: 20px;
+  align-items: center;
+  filter: drop-shadow(2px 2px 4.17px);
+}
