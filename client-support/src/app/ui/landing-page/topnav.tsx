@@ -7,11 +7,25 @@ import React, { useState } from 'react';
 
 export default function TopNav() {
 
-    const [collapse, setCollapse] = useState(true);
+    const [collapse, setCollapse] = useState([
+        {
+            label: 'Products',
+            selected: false,
+        },
+        {
+            label: 'About',
+            selected: false,
+        },
+        {
+            label: 'Resources',
+            selected: false,
+        },
+    ]);
+
 
     return (
-        <nav className="flex flex-col justify-between bg-white px-2 py-2">
-            <div className="hidden flex lg:inline-flex justify-end">
+        <nav className="flex flex-col justify-between bg-white gap-[16px] px-[20px] py-[10px]">
+            <div className="hidden flex lg:inline-flex justify-end gap-[32px]">
                 <Link href={''}>Support</Link>
                 <Link href={''}>(631) 686-9700</Link>
             </div>
@@ -26,35 +40,49 @@ export default function TopNav() {
                     className=""
                     alt="Answering Legal Logo"
                 ></Image>
-                <div className="flex hidden px-3 justify-between lg:inline-flex">
-                    <div className="flex pr-8 hidden lg:inline-flex">
+                <div className="flex hidden px-3 justify-between px-[32px] lg:inline-flex">
+                    <div className="flex pr-8 hidden lg:inline-flex font-semibold">
                         {
-                            ["Products", "About", "Resources"].map((name) => {
-                                return <div key={name} className="px-5 self-center">
-                                    {name}
-                                </div>
+                            collapse.map((drop) => {
+                                return <button
+                                    key={drop.label}
+                                    id={drop.label}
+                                    className={`px-5 flex self-center text-center gap-[8px] hover:text-blue-500`}
+                                    onClick={(e) => {
+                                        const menu = document.getElementById(drop.label)
+                                        menu?.classList.toggle('text-blue-500');
+                                        console.log((menu?.innerText)?.includes('⌄'))
+                                    }}>
+                                    <div id={`${drop.label}-arrow`}>
+                                        {drop.label}
+                                    </div>
+                                    <div>
+                                        ⌄
+                                    </div>
+                                </button>
                             })
                         }
                         <div className="self-center">
                             Pricing
                         </div>
                     </div>
-                    <div>
-                        <div className="flex content-center justify-end lg:gap-[3px] lg:gap-[9.2px]">
-                            <Image
-                                width={32}
-                                height={32}
-                                src='/images/Search.svg'
-                                alt="search icon" />
-                            <Link href={'/try-for-free'}
-                                className="btn text-sub2 font-bold inline-block content-center align-middle px-[20px]  py-[8px] rounded-[11.03px]">
-                                Try for free
-                            </Link>
-
-                        </div>
-                    </div>
 
                 </div>
+                <div>
+                    <div className="flex content-center justify-end lg:gap-[3px] lg:gap-[9.2px]">
+                        <Image
+                            width={32}
+                            height={32}
+                            src='/images/Search.svg'
+                            alt="search icon" />
+                        <Link href={'/try-for-free'}
+                            className="btn text-sub2 font-bold inline-block content-center align-middle px-[20px]  py-[8px] rounded-[11.03px]">
+                            Try for free
+                        </Link>
+
+                    </div>
+                </div>
+
                 <button data-collapse-toggle="mobile-menu" type="button"
                     className=" inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="mobile-menu" aria-expanded="true">

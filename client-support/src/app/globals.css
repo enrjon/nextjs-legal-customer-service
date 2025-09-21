@@ -44,6 +44,11 @@ body {
   line-height: 1;
 }
 
+nav {
+  color: rgba(22, 22, 65, 1);
+;
+}
+
 .btn {
   color: #ffffff;
   background-color: #0360E6;
