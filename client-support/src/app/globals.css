@@ -49,3 +49,20 @@ body {
   align-items: center;
   filter: drop-shadow(2px 2px 4.17px);
 }
+
+.form {
+  min-width: 396px;
+  max-width: 524px;
+  width: auto;
+  border-radius: 20px;
+  color: #161641;
+  background-color: #ffffff;
+  padding: 32px;
+  gap: 32px;
+}
+form.form > div > input {
+  border: 1px solid #141414;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 16px;
+}
