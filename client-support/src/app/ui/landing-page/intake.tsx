@@ -2,19 +2,26 @@ import Image from "next/image"
 
 export default function Intake() {
     return (
-        <div className="flex bg-white justify-center ">
-            <div className="w-130">
-                <h3 className="text-h3 font-bold">Design your perfect legal intake process</h3>
-                <p>Get everything you need out of every new client call. The virtual receptionists at our legal intake call center will use your unique specifications to perform a legal intake for every new client caller.</p>
-                <button className="bg-blue-500 rounded text-white px-3 py-1 font-semibold">See our Pricing</button>
+        <div className="flex justify-center gap-[50px] p-[32px] lg:py-[64]">
+            <div className="flex flex-col-reverse items-center md:flex-row gap-[32px] max-w-[1100px]">
+                <div className="flex flex-col gap-[32px] max-w-[534px] min-w-[364px]">
+                    <div className="gap-[32px] py-[32px]">
+                        <h3 className="text-h2 font-bold">Design your perfect legal intake process</h3>
+                        <div className="w-full h-[2px] bg-blue-500"></div>
+                        <p className="text-b2">Get everything you need out of every new client call. The virtual receptionists at our legal intake call center will use your unique specifications to perform a legal intake for every new client caller.</p>
+                    </div>
+                    <button className="btn self-start px-[24px] py-[11px] text-sub1 gap-[10px] rounded-[12px]">
+                        See our pricing</button>
+                </div>
+                <Image
+                    src='/images/Receptionist_IMG.png'
+                    sizes="100pvw"
+                    width={534}
+                    height={453}
+                    className="max-w-[534px] min-w-[364px;]"
+                    alt="Receptionist answering phone"
+                ></Image>
             </div>
-            <Image
-                src='/images/Receptionist_IMG.png'
-                sizes="100pvw"
-                width={534}
-                height={453}
-                alt="Receptionist answering phone"
-            ></Image>
         </div>
     )
 }
