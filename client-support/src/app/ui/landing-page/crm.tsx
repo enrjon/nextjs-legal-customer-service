@@ -8,13 +8,16 @@ export default function CRM() {
     ]
     return (
         <div className="flex flex-col bg-white items-center justify-center gap-[50px] px-[16px] py-[32px]">
-            <div className="flex flex-col lg:flex-row gap-[32px] max-w-[1100px]">
+            <div className="flex flex-col items-center lg:flex-row gap-[32px] max-w-[1100px]">
                 <Image
                     src='/images/CRM-Graphic.png'
                     width={534}
                     height={453}
                     alt="image of CRM messaging being utilized."
                     className="min-w-[364px] max-w-[534px]"
+                    style={{
+                        objectFit: 'contain'
+                    }}
                 ></Image>
                 <div className="flex flex-col gap-[32px] py-[32px]">
                     <div className="gap-[24px]">
