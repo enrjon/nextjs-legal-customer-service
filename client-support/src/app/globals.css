@@ -11,17 +11,22 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --text-h1: 64px;
-  --text-h1--font-weight: 700;
-  --text-h1--font-style: bold;
+  --text-h1--font-weight-bold: 700;
   --text-h2: 32px;
-  --text-h2--font-weight: 700;
+  --text-h2--font-weight-bold: 700;
   --text-h3: 24px;
-  --text-sub1: 22.07px;
+  --text-h3--font-weight-bold: 600;
+  --text-sub1: 24px;
+  --text-sub1--font-weight-semi-bold: 600;
   --text-sub2: 16px;
+  --text-sub2--font-weight-semi-bold: 600;
   --text-b1: 16px;
   --text-b1--font-weight: 400;
   --text-b2: 20px;
+  --text-b2--font-weight: 400;
+  --text-b2--line-height: 32;
   --text-sm1: 12px;
+  --text-sm1--font-weight-semi-bold: 600;
 }
 
 @media (prefers-color-scheme: light) {
