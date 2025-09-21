@@ -10,7 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --text-h1: 64px;
+  --text-h1: 48px;
   --text-h1--font-weight-bold: 700;
   --text-h2: 32px;
   --text-h2--font-weight-bold: 700;
@@ -41,6 +41,7 @@ body {
   color: var(--foreground);
   font-family: Montserrat, Helvetica, sans-serif;
   overflow-x: hidden;
+  line-height: 1;
 }
 
 .btn {
