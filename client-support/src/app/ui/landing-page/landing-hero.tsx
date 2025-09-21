@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function LandingHero() {
     return (
-        <div className="flex content-center flex-col md:flex-row ">
+        <div className="flex content-center flex-col md:flex-row">
             <Image
                 src='/images/LandingHero.jpg'
                 alt='Landing Page Hero image'
