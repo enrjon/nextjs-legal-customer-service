@@ -10,46 +10,53 @@ export default function TopNav() {
     const [collapse, setCollapse] = useState(true);
 
     return (
-        <nav className="flex inline-flex justify-between bg-white ">
-            <Image
-                src='/images/Answering_LegalTM_Blue.png'
-                width={300}
-                height={10}
-                alt="Answering Legal Logo"
-            ></Image>
-            <div className="flex hidden px-3 justify-between md:inline-flex">
-                <div className="flex pr-8 hidden md:inline-flex">
-                    {
-                        ["Products", "About", "Resources"].map((name) => {
-                            return <div key={name} className="px-5 self-center">
-                                        {name}
-                                    </div>
-                        })
-                    }
-                    <div className="self-center">
-                        Pricing
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <Link href={''}>Support</Link>
-                        <Link href={''}>(631) 686-9700</Link>
-                    </div>
-                    <div className="flex">
-                        <Image 
-                            width={30}
-                            height={30}
-                            src='/images/Search.svg'
-                            alt="search icon"/>
-                        <Link href={''}>
-                            <button className="flex bg-blue-500 rounded text-white px-2 py-1 font-bold">Try for free</button>
-                        </Link>
-
-                    </div>
-                </div>
+        <nav className="flex flex-col justify-between bg-white px-2 py-2 relative">
+            <div className="hidden flex md:inline-flex justify-end">
+                <Link href={''}>Support</Link>
+                <Link href={''}>(631) 686-9700</Link>
             </div>
-            <button data-collapse-toggle="mobile-menu" type="button"
-                    className="btn inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            <div className="flex justify-between ">
+                <Image
+                    src='/images/Answering_LegalTM_Blue.png'
+                    width={293}
+                    height={48}
+                    style={{
+                        objectFit: 'contain',
+                    }}
+                    className=""
+                    alt="Answering Legal Logo"
+                ></Image>
+                <div className="flex hidden px-3 justify-between lg:inline-flex">
+                    <div className="flex pr-8 hidden md:inline-flex">
+                        {
+                            ["Products", "About", "Resources"].map((name) => {
+                                return <div key={name} className="px-5 self-center">
+                                    {name}
+                                </div>
+                            })
+                        }
+                        <div className="self-center">
+                            Pricing
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex content-center justify-end gap-[9.2px]">
+                            <Image
+                                width={32}
+                                height={32}
+                                src='/images/Search.svg'
+                                alt="search icon" />
+                            <Link href={'/try-for-free'}
+                                className="btn text-sub1 font-bold inline-block content-center align-middle px-[20px]  py-[8px] rounded-[11.03px]">
+                                Try for free
+                            </Link>
+
+                        </div>
+                    </div>
+
+                </div>
+                <button data-collapse-toggle="mobile-menu" type="button"
+                    className=" inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="mobile-menu" aria-expanded="true">
                     <span className="sr-only">Open main menu</span>
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +70,8 @@ export default function TopNav() {
                             clipRule="evenodd"></path>
                     </svg>
                 </button>
+            </div>
+
         </nav>
     )
 }

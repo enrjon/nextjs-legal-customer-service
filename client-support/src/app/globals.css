@@ -15,7 +15,7 @@
   --text-h2: 32pt;
   --text-h2--font-weight: 700;
   --text-h3: 24pt;
-  --text-sub1: 24pt;
+  --text-sub1: 22.07px;
   --text-sub2: 16pt;
   --text-b1: 16pt;
   --text-b2: 20pt;
@@ -36,10 +36,6 @@ body {
 }
 
 .btn {
-  min-width: 154px;
-  min-height: 49px;
-  border-radius: 12px;
-  padding: 16px 24px;
   color: #ffffff;
   background-color: #0360E6;
   font-weight: 600;

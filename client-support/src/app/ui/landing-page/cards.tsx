@@ -8,14 +8,14 @@ export default function Cards() {
             image: "/images/AL_2ColorIcon-AnsweringService.svg",
         },
         {
-            label: "Legal answering service",
+            label: "AI intake chatbot",
             description: "With 24/7 legal intake, you’ll never miss a potential client’s call.",
-            image: "/images/AL_2ColorIcon-AnsweringService.svg",
+            image: "/images/AL_2ColorIcon-Chatbot.svg",
         },
         {
-            label: "Legal answering service",
+            label: "Live translation services",
             description: "With 24/7 legal intake, you’ll never miss a potential client’s call.",
-            image: "/images/AL_2ColorIcon-AnsweringService.svg",
+            image: "/images/AL_2ColorIcon-LVCv2.svg",
         },
     ]
 

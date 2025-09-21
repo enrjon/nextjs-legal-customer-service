@@ -1,6 +1,7 @@
 import BlogCard from "@/app/components/blog-card"
 
 export default function Blog() {
+    // Simulates a fetch to the blog API
     const blogFetch = Array(3).fill(
         {
             section: 'LAWYER WELLNESS',

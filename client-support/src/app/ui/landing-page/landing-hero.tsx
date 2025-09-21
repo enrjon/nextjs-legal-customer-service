@@ -8,31 +8,25 @@ export default function LandingHero() {
             <Image
                 src='/images/LandingHero.jpg'
                 alt='Landing Page Hero image'
-                width={10000}
-                height={10000}
+                fill
                 style={{
-                    width: '100%',
-                    height: 'auto',
-                }}         
-                className="-z-10 hidden md:inline-flex fixed"
-                objectFit={'contain'}
+                    objectFit: 'cover',
+                }}
+                className="-z-10 hidden md:inline-flex"
             >
             </Image>
             <Image
                 src='/images/LandingHeroMobile.jpg'
                 alt='Landing Page Hero image for mobile'
-                width={10000}
-                height={10000}
+                fill
                 style={{
-                    width: 'auto',
-                    height: '100%',
-                }}  
-                objectFit={'contain'}
+                    objectFit: 'cover',
+                }}
                 className="-z-10 inline-flex md:hidden"
             >
             </Image>
             <div className="text-white py-5">
-                <h1 className="text-h2 ">We're more than an answering service</h1>
+                <h1 className="text-h2 ">We&apos;re more than an answering service</h1>
                 <p className="py-2 text-b1">Answering Legal has everything you need to make sure your firm never misses another opportunity.</p>
                 <div className="flex flex-col w-80">
                     <h3 className="text-h3 font-bold">Excellent 4.84</h3>
