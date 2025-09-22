@@ -69,7 +69,7 @@ export default function TopNav() {
 
                 </div>
                 <div>
-                    <div className="flex content-center justify-end lg:gap-[3px] lg:gap-[9.2px]">
+                    <div className="flex hidden lg:inline-flex content-center justify-end lg:gap-[3px] lg:gap-[9.2px]">
                         <Image
                             width={32}
                             height={32}

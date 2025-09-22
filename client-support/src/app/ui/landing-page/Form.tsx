@@ -7,7 +7,7 @@ interface FormInput {
     'last-name': string;
     'form-email': string;
     'company-name': string;
-    'cell-phone': number;
+    'cell-phone': string;
 }
 
 export default function Form() {
@@ -89,7 +89,7 @@ export default function Form() {
                 <form
                     onSubmit={(e)=>{
                         e.preventDefault();
-                        handleSubmit(e.target)
+                        handleSubmit(form)
                     }}
                     className="flex flex-col form self-center"
                 >
