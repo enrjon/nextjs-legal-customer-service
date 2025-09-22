@@ -1,12 +1,13 @@
 'use client'
+import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
 import { useState, useRef } from "react"
 
 interface FormInput {
     'first-name': string;
-        'last-name': string;
-        'form-email': string;
-        'company-name': string;
-        'cell-phone': number;
+    'last-name': string;
+    'form-email': string;
+    'company-name': string;
+    'cell-phone': number;
 }
 
 export default function Form() {
@@ -15,24 +16,25 @@ export default function Form() {
         'last-name': '',
         'form-email': '',
         'company-name': '',
-        'cell-phone': '',
+        'cell-phone': NaN,
     })
     const [submit, setSubmit] = useState(false);
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = (e : HTMLInputElement) => {
+        const { name, value } = e;
 
         setForm({ ...form, [name]: value })
     }
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == ''|| form['cell-phone'] == '') {
+    const handleSubmit = (e : FormInput) => {
+        console.log(e)
+        
+        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == '' || form['cell-phone'] == NaN) {
             console.log('submitition error')
             console.log(form)
             document.getElementById('form-error')?.classList.remove('hidden')
         } else {
             setSubmit(true);
             console.log('submitted')
-            
+
             document.getElementById('form-error')?.classList.add('hidden')
             setTimeout(() => {
                 setSubmit(false)
@@ -46,26 +48,31 @@ export default function Form() {
         {
             label: 'First Name*',
             name: 'first-name',
+            type: 'text',
             id: 'fname'
         },
         {
             label: 'Last Name*',
             name: 'last-name',
+            type: 'text',
             id: 'lname'
         },
         {
             label: 'Company Name*',
             name: 'company-name',
+            type: 'text',
             id: 'company'
         },
         {
             label: 'Email*',
             name: 'form-email',
-            id: 'email'
+            type: 'email',
+            id: 'email',
         },
         {
             label: 'Cell Phone*',
             name: 'cell-phone',
+            type: 'tel',
             id: 'cell'
         }
     ];
@@ -80,7 +87,10 @@ export default function Form() {
                     </div>
                 </div>
                 <form
-                    onSubmit={handleSubmit}
+                    onSubmit={(e)=>{
+                        e.preventDefault();
+                        handleSubmit(e.target)
+                    }}
                     className="flex flex-col form self-center"
                 >
                     <h3 className="text-sub1 font-bold">Tell us about yourself. We{`'`}ll show you all of our pricing information on the next page.</h3>
@@ -90,11 +100,11 @@ export default function Form() {
                             return (
                                 <div key={`form-${elem.id}`} className="flex flex-col gap-[7px]">
                                     <label>{elem.label}</label>
-                                    <input type="text"
+                                    <input type={elem.type}
                                         name={elem.name}
                                         id={elem.id}
                                         placeholder={elem.label}
-                                        onChange={(e)=>{handleChange(e)}} />
+                                        onChange={(e) => { handleChange(e.target) }} />
                                 </div>
                             )
                         })
