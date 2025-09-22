@@ -89,6 +89,8 @@ export default function Form() {
                                         id={elem.id}
                                         placeholder={elem.label}
                                         required={true}
+                                        onSelect={(e)=>{(e.target as HTMLInputElement).placeholder = '...'}}
+                                        onBlur={(e)=>{e.target.placeholder = elem.label}}
                                         onChange={(e) => { handleChange(e.target) }}
                                         className="form-input" />
                                 </div>
