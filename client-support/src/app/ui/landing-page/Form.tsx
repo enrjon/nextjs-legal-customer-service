@@ -32,25 +32,39 @@ export default function Form() {
         setForm({ ...form, [name]: value })
     }
 
-    const handleValidation = () =>{
+    const handleValidation = () => {
         const labels = document.getElementsByClassName('form-label')
         const inputs = document.getElementsByClassName('form-input')
-        for(let i = 0; i < labels.length; i++){
+        for (let i = 0; i < labels.length; i++) {
             (labels.item(i) as HTMLInputElement).classList.add('error');
             (inputs.item(i) as HTMLInputElement).classList.add('error');
         }
         document.getElementById('form-error')?.classList.remove('hidden')
-        document.getElementById('form-success')?.classList.add('hidden')        
+        document.getElementById('form-success')?.classList.add('hidden')
     }
     const handleSubmit = () => {
         const labels = document.getElementsByClassName('form-label')
         const inputs = document.getElementsByClassName('form-input')
-        for(let i = 0; i < labels.length; i++){
+        for (let i = 0; i < labels.length; i++) {
             (labels.item(i) as HTMLInputElement).classList.remove('error');
             (inputs.item(i) as HTMLInputElement).classList.remove('error');
+
+            (labels.item(i) as HTMLInputElement).classList.add('disabled');
+            (inputs.item(i) as HTMLInputElement).classList.add('disabled');
+            (labels.item(i) as HTMLInputElement).disabled = true;
+            document.getElementById('form-success')?.classList.remove('hidden')
+
+            setTimeout(() => {
+                (labels.item(i) as HTMLInputElement).classList.remove('disabled');
+                (labels.item(i) as HTMLInputElement).disabled = false;
+                (inputs.item(i) as HTMLInputElement).classList.remove('disabled');
+                document.getElementById('form-success')?.classList.add('hidden')
+            }, 800)
+
         }
         console.log('submitted')
-        document.getElementById('form-success')?.classList.remove('hidden')
+
+        
         document.getElementById('form-error')?.classList.add('hidden')
         clearForm()
     }
@@ -89,8 +103,8 @@ export default function Form() {
                                         id={elem.id}
                                         placeholder={elem.label}
                                         required={true}
-                                        onSelect={(e)=>{(e.target as HTMLInputElement).placeholder = '...'}}
-                                        onBlur={(e)=>{e.target.placeholder = elem.label}}
+                                        onSelect={(e) => { (e.target as HTMLInputElement).placeholder = '...' }}
+                                        onBlur={(e) => { e.target.placeholder = elem.label }}
                                         onChange={(e) => { handleChange(e.target) }}
                                         className="form-input" />
                                 </div>

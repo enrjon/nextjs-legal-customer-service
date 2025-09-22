@@ -103,6 +103,17 @@ p.error, label.error {
 input.error {
   border-color: rgba(145, 27, 27, 1) !important;
 }
+
+.form-input.disabled {
+  background-color: #99999980;
+  color: #999999;
+  border: 1px solid #141414;
+}
+
+.form-label.disabled {
+  color: #999999;
+}
+
 .success {
   color: green;
 }
