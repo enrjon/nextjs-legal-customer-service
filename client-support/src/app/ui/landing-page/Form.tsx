@@ -23,7 +23,7 @@ export default function Form() {
 
         setForm({ ...form, [name]: value })
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
         e.preventDefault();
         if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == ''|| form['cell-phone'] == '') {
             console.log('submitition error')
