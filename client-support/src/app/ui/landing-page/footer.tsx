@@ -1,9 +1,11 @@
+import { url } from "inspector"
 import Link from "next/link"
 
 export default function Footer() {
     const footer = [
         {
             head: 'Our Service',
+            url: 'our-service',
             list: [
                 { name: 'Who We Serve', link: 'who-we-serve' },
                 { name: 'FAQs', link: 'faqs' },
@@ -16,6 +18,7 @@ export default function Footer() {
         },
         {
             head: 'Company',
+            url: 'company',
             list: [
                 { name: 'Meet The Team', link: 'meet-the-team' },
                 { name: 'Our Authors', link: 'our-authors' }
@@ -23,6 +26,7 @@ export default function Footer() {
         },
         {
             head: 'Partnerships',
+            url: 'partnerships',
             list: [
                 { name: 'Integrations', link: 'integrations' },
                 { name: 'Affiliate Program', link: 'affiliate-program' },
@@ -31,6 +35,7 @@ export default function Footer() {
         },
         {
             head: 'Resources',
+            url: 'resources',
             list: [
                 { name: 'Blog', link: 'blog' },
                 { name: 'Podcast', link: 'podcast' },
@@ -44,6 +49,7 @@ export default function Footer() {
         },
         {
             head: 'Support',
+            url: 'support',
             list: [
                 { name: 'Contact Us', link: 'contact-us' },
                 { name: 'Submit A Ticket', link: 'submit-a-ticket' },
@@ -55,6 +61,7 @@ export default function Footer() {
         },
         {
             head: 'Follow Us',
+            url: 'follow-us',
             list: [
                 { name: 'Twitter', link: 'twitter' },
                 { name: 'Facebook', link: 'facebook' },
@@ -64,23 +71,24 @@ export default function Footer() {
         },
     ]
     return (
-        <div className="flex flex-row text-white bg-blue-900">
-            <div>
-                <p>Have questions? Our team is here to help. Call 631-400-8888</p>
-                <p>Monday to Friday from 9 am to 7 pm EST.</p>
+        <footer className="flex flex-col gap-[32px] lg:gap-[45px] px-[16px] py-[72px] lg:px-[106px] py-[100px] items-center">
+            <div className="flex flex-col gap-[13px]">
+                <h3 className="text-h3 font-bold text-center">Have questions? Our team is here to help. Call 631-400-8888</h3>
+                <p className="text-sm1 text-center text-blue-400 font-extrabold">Monday to Friday from 9 am to 7 pm EST.</p>
             </div>
-            <div className="flex">
+            <div className="bg-blue-800 h-[2px] w-full"></div>
+            <div className="hidden flex lg:inline-flex w-full justify-between gap-[15px]">
                 {
                     footer.map((section, i) => {
                         return (
                             <div key={`footer-${section.head}-${i}`}
-                                className="flex ">
-                                <h3>{section.head}</h3>
+                                className="text-sub1 font-semibold gap-[5px] flex flex-col">
+                                <h3 className="">{section.head}</h3>
                                 <ul>
                                     {section.list.map((li, i) => {
                                         return <li key={`footer-${li.name}-${i}`}>
                                             <Link
-
+                                                className="text-b1"
                                                 href={`http://localhost:3000/landing-page/${li.link}`}
                                             >{li.name}</Link>
                                         </li>
@@ -91,6 +99,20 @@ export default function Footer() {
                     })
                 }
             </div>
-        </div>
+            <div className="grid grid-cols-2 gap-[32px] lg:hidden">
+                {
+                    footer.map((section, i) => {
+                        return (
+                            <div key={`footer-${section.head}-${i}`}
+                                className="text-sub1 font-semibold text-center">
+                                <Link href={`/${section.url}`}>{section.head}</Link>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className="bg-blue-800 h-[2px] w-full"></div>
+            <p>© 2024 Answering Legal · All Rights Reserved</p>
+        </footer>
     )
 }

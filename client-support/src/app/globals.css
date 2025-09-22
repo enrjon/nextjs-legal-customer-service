@@ -83,3 +83,8 @@ form.form > div > input {
   padding: 6px 8px;
   font-size: 16px;
 }
+
+footer {
+  background-color: #161641;
+  color: white;
+}
