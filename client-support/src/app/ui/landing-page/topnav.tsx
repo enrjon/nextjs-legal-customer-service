@@ -59,13 +59,20 @@ export default function TopNav() {
                                     className={`px-5 flex self-center text-center gap-[8px] hover:text-blue-500`}
                                     onClick={(e) => {
                                         const menu = document.getElementById(drop.label)
-                                        menu?.classList.toggle('text-blue-500');
-                                        console.log((menu?.innerText)?.includes('⌄'))
+                                        const tickElem = document.getElementById(`${drop.label}-tick`)
+                                        menu?.classList.toggle('selected');
+                                        if(menu?.classList.contains('selected')){
+                                            (tickElem as HTMLDivElement).innerHTML = '⌃';
+                                        } else {
+                                            (tickElem as HTMLDivElement).innerHTML = '⌄';
+                                        }
+                                            
+                                        
                                     }}>
                                     <div id={`${drop.label}-arrow`}>
                                         {drop.label}
                                     </div>
-                                    <div>
+                                    <div id={`${drop.label}-tick`}>
                                         ⌄
                                     </div>
                                 </button>

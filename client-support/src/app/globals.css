@@ -107,6 +107,10 @@ input.error {
   font-size: 18px;
 }
 
+.selected {
+  color: rgba(3, 96, 230, 1);
+}
+
 .divider {
   background-color: rgba(60, 206, 215, 1);
 }
