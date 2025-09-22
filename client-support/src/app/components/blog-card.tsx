@@ -1,15 +1,6 @@
 import Image from "next/image"
-//import blogImage from '/images/Article_img_placeholder.jpg'
 import Link from "next/link"
-
-interface Blog {
-    section: string;
-    date: string;
-    title: string;
-    img: string;
-    content: string;
-    link: string;
-}
+import { Blog } from "../util/blog"
 
 export default function BlogCard(blogData: Blog) {
     return (

@@ -2,30 +2,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import React, { useState } from 'react';
+import { collapse } from "@/app/util/collapse";
 
 export default function TopNav() {
-
-    const [collapse, setCollapse] = useState([
-        {
-            label: 'Products',
-            selected: false,
-        },
-        {
-            label: 'About',
-            selected: false,
-        },
-        {
-            label: 'Resources',
-            selected: false,
-        },
-    ]);
-
-
     return (
         <div>
             <Link href={'/try-for-free'}
                             className="btn text-sub2 font-bold flex justify-center w-full gap-[10px] px-[24px] py-[24px] lg:hidden">
-                            Try for free 
+                            Try for free here
                             <Image
                                 src='/images/try-arrow.svg'
                                 width={14}

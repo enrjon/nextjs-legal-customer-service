@@ -1,14 +1,6 @@
 'use client'
 import { useState } from "react"
-
-
-interface FormInput {
-    'first-name': string;
-    'last-name': string;
-    'form-email': string;
-    'company-name': string;
-    'cell-phone': string;
-}
+import { FormInput, formElems } from "@/app/util/forms"
 
 export default function Form() {
     const [form, setForm] = useState<FormInput>({
@@ -62,38 +54,6 @@ export default function Form() {
         document.getElementById('form-error')?.classList.add('hidden')
         clearForm()
     }
-    const formElems = [
-        {
-            label: 'First Name*',
-            name: 'first-name',
-            type: 'text',
-            id: 'fname'
-        },
-        {
-            label: 'Last Name*',
-            name: 'last-name',
-            type: 'text',
-            id: 'lname'
-        },
-        {
-            label: 'Company Name*',
-            name: 'company-name',
-            type: 'text',
-            id: 'company'
-        },
-        {
-            label: 'Email*',
-            name: 'form-email',
-            type: 'email',
-            id: 'email',
-        },
-        {
-            label: 'Cell Phone*',
-            name: 'cell-phone',
-            type: 'tel',
-            id: 'cell'
-        }
-    ];
 
     return (
         <div className="flex flex-col px-[16px] py-[64px] gap-[64px]" style={{ backgroundColor: "#161641" }}>
