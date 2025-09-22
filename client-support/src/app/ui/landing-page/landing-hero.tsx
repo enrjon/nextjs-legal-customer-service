@@ -26,7 +26,7 @@ export default function LandingHero() {
                 className="-z-10 inline-flex lg:hidden"
             >
             </Image>
-            <div className="bg-blue text-white lg:bg-transparent flex flex-col justify-center gap-[24px] px-[16px] lg:px-[64px] py-[32px] w-full">
+            <div className="text-white bg-[#161641] lg:bg-transparent flex flex-col justify-center gap-[24px] px-[16px] lg:px-[64px] py-[32px] w-full">
                 <div className="flex flex-col gap-[32px] max-w-[650px]">
                     <div className=" lg:order-3 flex flex-row lg:flex-col items-center lg:items-start">
                         <h3 className="text-h3 font-bold w-1/2 text-center lg:text-start">Excellent 4.84</h3>

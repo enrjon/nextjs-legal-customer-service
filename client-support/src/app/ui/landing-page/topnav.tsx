@@ -35,7 +35,7 @@ export default function TopNav() {
                         </Link>
             <nav className="flex flex-col justify-between bg-white gap-[16px] px-[20px] py-[10px]">            
             <div className="hidden flex lg:inline-flex justify-end gap-[32px]">
-                <Link href={''} className="" style={{color: "rgba(153, 153, 153, 1);"}}>Support</Link>
+                <Link href={''} className="gray-text underline">Support</Link>
                 <Link href={''}>(631) 686-9700</Link>
             </div>
             <div className="flex justify-between ">

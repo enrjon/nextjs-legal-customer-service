@@ -98,7 +98,7 @@ export default function Form() {
     return (
         <div className="flex flex-col px-[16px] py-[64px] gap-[64px]" style={{ backgroundColor: "#161641" }}>
             <div className="flex flex-col lg:flex-row gap-[64px] self-center max-w-[1120px]">
-                <div className="text-white flex flex-col justify-center gap-[10px] min-w-[400px]">
+                <div className="text-white flex flex-col justify-center gap-[10px]">
                     <div className="flex flex-col justify-center gap-[32px]">
                         <h1 className="text-h2 font-bold">24/7 coverage at a fraction of the cost of in-house receptionists.</h1>
                         <p className="text-sub1">Don’t believe us? Fill out the form on the right, and we{`'`}ll take you to our pricing page, where you can find out just how little 24/7 legal intake will cost you.</p>

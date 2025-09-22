@@ -114,3 +114,7 @@ input.error {
 .divider {
   background-color: rgba(60, 206, 215, 1);
 }
+
+.gray-text {
+  color: rgba(153, 153, 153, 1);
+}
