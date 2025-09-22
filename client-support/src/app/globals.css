@@ -94,3 +94,11 @@ footer {
 .error {
   color: rgba(145, 27, 27, 1);
 }
+
+.success {
+  color: green;
+}
+.form-message {
+  font-weight: 400;
+  font-size: 18px;
+}

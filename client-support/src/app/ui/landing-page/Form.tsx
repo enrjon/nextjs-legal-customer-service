@@ -18,7 +18,15 @@ export default function Form() {
         'company-name': '',
         'cell-phone': '',
     })
-    const [submit, setSubmit] = useState(false);
+
+    const clearForm = ()=> {
+        formElems.map((elem)=>{
+            document.getElementById(elem.id).value = '';
+            console.log(elem)
+        })
+    }
+
+    //const [submit, setSubmit] = useState(false);
     const handleChange = (e : HTMLInputElement) => {
         const { name, value } = e;
 
@@ -31,13 +39,14 @@ export default function Form() {
             console.log('submitition error')
             console.log(form)
             document.getElementById('form-error')?.classList.remove('hidden')
+            //document.getElementById('form-success')?.classList.remove('hidden')
         } else {
-            setSubmit(true);
+            
             console.log('submitted')
-
+            document.getElementById('form-success')?.classList.remove('hidden')
             document.getElementById('form-error')?.classList.add('hidden')
+            clearForm()
             setTimeout(() => {
-                setSubmit(false)
                 console.log('reset')
             }, 5000)
         }
@@ -94,7 +103,8 @@ export default function Form() {
                     className="flex flex-col form self-center"
                 >
                     <h3 className="text-sub1 font-bold">Tell us about yourself. We{`'`}ll show you all of our pricing information on the next page.</h3>
-                    <p id='form-error' className=" hidden text-sub2 error">Please fill in a valid value for all required fieldsFields: Name, Company Name, Email, Phone</p>
+                    <p id='form-error' className=" hidden error form-message">Please fill in a valid value for all required fieldsFields: Name, Company Name, Email, Phone</p>
+                    <p id='form-success' className="hidden success form-message">Thanks for reaching out!</p>
                     {
                         formElems.map((elem) => {
                             return (
