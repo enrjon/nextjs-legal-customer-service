@@ -18,12 +18,12 @@ export default function Form() {
         'cell-phone': '',
     })
     const [submit, setSubmit] = useState(false);
-    const handleChange = () => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
 
         setForm({ ...form, [name]: value })
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == ''|| form['cell-phone'] == '') {
             console.log('submitition error')
@@ -94,7 +94,7 @@ export default function Form() {
                                         name={elem.name}
                                         id={elem.id}
                                         placeholder={elem.label}
-                                        onChange={handleChange} />
+                                        onChange={(e)=>{handleChange(e)}} />
                                 </div>
                             )
                         })
