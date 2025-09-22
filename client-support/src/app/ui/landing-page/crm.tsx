@@ -20,11 +20,12 @@ export default function CRM() {
                     }}
                 ></Image>
                 <div className="flex flex-col gap-[32px] py-[32px]">
-                    <div className="gap-[24px]">
+
+                    <div className="flex flex-col gap-[24px]">
                         <h2 className="text-h2 font-bold">Your data’s in good hands</h2>
                         <div className="w-full h-[2px] bg-blue-500 rounded-[15px]"></div>
                         <h4 className="text-b2">Our partnership with your CRM enables a seamless flow of information.</h4>
-                        <ul>
+                        <ul className="flex flex-col gap-[9px]">
                             {
 
                                 crmList.map((li, i) => {
@@ -42,6 +43,8 @@ export default function CRM() {
                             }
                         </ul>
                     </div>
+
+
                     <div>
                         <button className="btn px-[24px] py-[11px] text-sub1 gap-[10px] rounded-[12px]">See our Pricing</button>
                     </div>
