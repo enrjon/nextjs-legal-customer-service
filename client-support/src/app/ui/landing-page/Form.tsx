@@ -1,10 +1,47 @@
 'use client'
 import { useState, useRef } from "react"
 
-export default function Form() {
-    //const formRef = useRef();
-    //const
+interface FormInput {
+    'first-name': string;
+        'last-name': string;
+        'form-email': string;
+        'company-name': string;
+        'cell-phone': number;
+}
 
+export default function Form() {
+    const [form, setForm] = useState({
+        'first-name': '',
+        'last-name': '',
+        'form-email': '',
+        'company-name': '',
+        'cell-phone': '',
+    })
+    const [submit, setSubmit] = useState(false);
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setForm({ ...form, [name]: value })
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == ''|| form['cell-phone'] == '') {
+            console.log('submitition error')
+            console.log(form)
+            document.getElementById('form-error')?.classList.remove('hidden')
+        } else {
+            setSubmit(true);
+            console.log('submitted')
+            
+            document.getElementById('form-error')?.classList.add('hidden')
+            setTimeout(() => {
+                setSubmit(false)
+                console.log('reset')
+            }, 5000)
+        }
+
+
+    }
     const formElems = [
         {
             label: 'First Name*',
@@ -42,16 +79,22 @@ export default function Form() {
                         <p className="text-sub1">Don’t believe us? Fill out the form on the right, and we{`'`}ll take you to our pricing page, where you can find out just how little 24/7 legal intake will cost you.</p>
                     </div>
                 </div>
-                <form onSubmit={() => { console.log('Form submitted') }}
-                    className="flex flex-col form font-bold self-center"
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col form self-center"
                 >
                     <h3 className="text-sub1 font-bold">Tell us about yourself. We{`'`}ll show you all of our pricing information on the next page.</h3>
+                    <p id='form-error' className=" hidden text-sub2 error">Please fill in a valid value for all required fieldsFields: Name, Company Name, Email, Phone</p>
                     {
                         formElems.map((elem) => {
                             return (
-                                <div key={`form-${elem.id}`} className="flex flex-col">
+                                <div key={`form-${elem.id}`} className="flex flex-col gap-[7px]">
                                     <label>{elem.label}</label>
-                                    <input type="text" name={elem.name} id={elem.id} placeholder={elem.label} />
+                                    <input type="text"
+                                        name={elem.name}
+                                        id={elem.id}
+                                        placeholder={elem.label}
+                                        onChange={handleChange} />
                                 </div>
                             )
                         })

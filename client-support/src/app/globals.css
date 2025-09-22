@@ -84,7 +84,13 @@ form.form > div > input {
   font-size: 16px;
 }
 
+
+
 footer {
   background-color: #161641;
   color: white;
+}
+
+.error {
+  color: rgba(145, 27, 27, 1);
 }
