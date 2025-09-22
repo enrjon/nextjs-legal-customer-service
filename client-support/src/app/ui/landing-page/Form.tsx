@@ -16,7 +16,7 @@ export default function Form() {
         'last-name': '',
         'form-email': '',
         'company-name': '',
-        'cell-phone': NaN,
+        'cell-phone': '',
     })
     const [submit, setSubmit] = useState(false);
     const handleChange = (e : HTMLInputElement) => {
@@ -27,7 +27,7 @@ export default function Form() {
     const handleSubmit = (e : FormInput) => {
         console.log(e)
         
-        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == '' || form['cell-phone'] == NaN) {
+        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == '' || form['cell-phone'] == '') {
             console.log('submitition error')
             console.log(form)
             document.getElementById('form-error')?.classList.remove('hidden')
