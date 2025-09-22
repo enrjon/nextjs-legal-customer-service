@@ -1,6 +1,6 @@
 'use client'
-import { HtmlContext } from "next/dist/server/route-modules/pages/vendored/contexts/entrypoints";
-import { useState, useRef } from "react"
+import { useState } from "react"
+
 
 interface FormInput {
     'first-name': string;
@@ -11,7 +11,7 @@ interface FormInput {
 }
 
 export default function Form() {
-    const [form, setForm] = useState({
+    const [form, setForm] = useState<FormInput>({
         'first-name': '',
         'last-name': '',
         'form-email': '',
@@ -19,39 +19,48 @@ export default function Form() {
         'cell-phone': '',
     })
 
-    const clearForm = ()=> {
-        formElems.map((elem)=>{
+    const clearForm = () => {
+        formElems.map((elem) => {
             (document.getElementById(elem.id) as HTMLInputElement).value = '';
-            console.log(elem)
+            setForm(
+                {
+                    'first-name': '',
+                    'last-name': '',
+                    'form-email': '',
+                    'company-name': '',
+                    'cell-phone': '',
+                }
+            )
         })
     }
 
-    //const [submit, setSubmit] = useState(false);
-    const handleChange = (e : HTMLInputElement) => {
+    const handleChange = (e: HTMLInputElement) => {
         const { name, value } = e;
 
         setForm({ ...form, [name]: value })
     }
-    const handleSubmit = (e : FormInput) => {
-        console.log(e)
-        
-        if (form['first-name'] == '' || form['form-email'] == '' || form['last-name'] == '' || form['company-name'] == '' || form['cell-phone'] == '') {
-            console.log('submitition error')
-            console.log(form)
-            document.getElementById('form-error')?.classList.remove('hidden')
-            //document.getElementById('form-success')?.classList.remove('hidden')
-        } else {
-            
-            console.log('submitted')
-            document.getElementById('form-success')?.classList.remove('hidden')
-            document.getElementById('form-error')?.classList.add('hidden')
-            clearForm()
-            setTimeout(() => {
-                console.log('reset')
-            }, 5000)
+
+    const handleValidation = () =>{
+        const labels = document.getElementsByClassName('form-label')
+        const inputs = document.getElementsByClassName('form-input')
+        for(let i = 0; i < labels.length; i++){
+            (labels.item(i) as HTMLInputElement).classList.add('error');
+            (inputs.item(i) as HTMLInputElement).classList.add('error');
         }
-
-
+        document.getElementById('form-error')?.classList.remove('hidden')
+        document.getElementById('form-success')?.classList.add('hidden')        
+    }
+    const handleSubmit = () => {
+        const labels = document.getElementsByClassName('form-label')
+        const inputs = document.getElementsByClassName('form-input')
+        for(let i = 0; i < labels.length; i++){
+            (labels.item(i) as HTMLInputElement).classList.remove('error');
+            (inputs.item(i) as HTMLInputElement).classList.remove('error');
+        }
+        console.log('submitted')
+        document.getElementById('form-success')?.classList.remove('hidden')
+        document.getElementById('form-error')?.classList.add('hidden')
+        clearForm()
     }
     const formElems = [
         {
@@ -96,25 +105,32 @@ export default function Form() {
                     </div>
                 </div>
                 <form
-                    onSubmit={(e)=>{
+                    onSubmit={(e) => {
                         e.preventDefault();
-                        handleSubmit(form)
+                        handleSubmit()
+                    }}
+                    onInvalid={(e) => {
+                        e.preventDefault();
+                        handleValidation()
                     }}
                     className="flex flex-col form self-center"
                 >
                     <h3 className="text-sub1 font-bold">Tell us about yourself. We{`'`}ll show you all of our pricing information on the next page.</h3>
-                    <p id='form-error' className=" hidden error form-message">Please fill in a valid value for all required fieldsFields: Name, Company Name, Email, Phone</p>
+                    <p id='form-error' className=" hidden error form-message">Please fill in a valid value for all required fieldsFields:
+                        <strong>Name, Company Name, Email, Phone</strong></p>
                     <p id='form-success' className="hidden success form-message">Thanks for reaching out!</p>
                     {
                         formElems.map((elem) => {
                             return (
                                 <div key={`form-${elem.id}`} className="flex flex-col gap-[7px]">
-                                    <label>{elem.label}</label>
+                                    <label className="form-label font-bold">{elem.label}</label>
                                     <input type={elem.type}
-                                        name={elem.name}
+                                        name={elem.id}
                                         id={elem.id}
                                         placeholder={elem.label}
-                                        onChange={(e) => { handleChange(e.target) }} />
+                                        required={true}
+                                        onChange={(e) => { handleChange(e.target) }}
+                                        className="form-input" />
                                 </div>
                             )
                         })

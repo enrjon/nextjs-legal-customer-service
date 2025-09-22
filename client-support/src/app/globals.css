@@ -91,10 +91,13 @@ footer {
   color: white;
 }
 
-.error {
+p.error, label.error {
   color: rgba(145, 27, 27, 1);
 }
 
+input.error {
+  border-color: rgba(145, 27, 27, 1) !important;
+}
 .success {
   color: green;
 }
