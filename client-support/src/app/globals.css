@@ -55,6 +55,10 @@ nav {
   font-weight: 600;
 }
 
+.btn:hover {
+  background-color: #161641;
+}
+
 .card {
   height: 471px;
   width: 352px;
