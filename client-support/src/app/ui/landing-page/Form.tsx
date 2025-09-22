@@ -21,7 +21,7 @@ export default function Form() {
 
     const clearForm = ()=> {
         formElems.map((elem)=>{
-            document.getElementById(elem.id).value = '';
+            document.getElementById(elem.id)!.value = '';
             console.log(elem)
         })
     }
