@@ -23,7 +23,7 @@ export default function Cards() {
         <div className="flex justify-center flex-col gap-[36px]">
             <div className="flex flex-col gap-[24px] p-[80px] items-center">
                 <h3 className="text-h3 font-bold flex text-center md:text-white">Here{`'`}s what we can do for your law firm</h3>
-                <div className="w-full bg-blue-500 h-[2px]"></div>
+                <div className="w-full divider h-[2px]"></div>
             </div>
 
             <div className="flex gap-[32px] flex-col lg:flex-row items-center justify-center">
@@ -38,7 +38,7 @@ export default function Cards() {
                                 className="flex"
                             ></Image>
                             <h2 className="text-h2 text-center font-bold">{card.label}</h2>
-                            <div className="w-full h-1 bg-blue-300"></div>
+                            <div className="w-full h-1 divider"></div>
                             <p className="text-sub2 font-semibold">{card.description}</p>
                         </div>
                     })

@@ -23,7 +23,7 @@ export default function CRM() {
 
                     <div className="flex flex-col gap-[24px]">
                         <h2 className="text-h2 font-bold">Your data’s in good hands</h2>
-                        <div className="w-full h-[2px] bg-blue-500 rounded-[15px]"></div>
+                        <div className="w-full h-[2px] divider rounded-[15px]"></div>
                         <h4 className="text-b2">Our partnership with your CRM enables a seamless flow of information.</h4>
                         <ul className="flex flex-col gap-[9px]">
                             {

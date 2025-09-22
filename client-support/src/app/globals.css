@@ -53,9 +53,8 @@ nav {
   color: #ffffff;
   background-color: #0360E6;
   font-weight: 600;
-  
-;
 }
+
 .card {
   height: 471px;
   width: 352px;
@@ -84,8 +83,6 @@ form.form > div > input {
   font-size: 16px;
 }
 
-
-
 footer {
   background-color: #161641;
   color: white;
@@ -93,6 +90,10 @@ footer {
 
 p.error, label.error {
   color: rgba(145, 27, 27, 1);
+}
+
+.bg-blue {
+  background-color: rgba(22, 22, 65, 1);
 }
 
 input.error {
@@ -104,4 +105,11 @@ input.error {
 .form-message {
   font-weight: 400;
   font-size: 18px;
+}
+
+.divider {
+  background-color: rgba(60, 206, 215, 1);
+}
+.divider2{
+  background-color: rgba(255, 255, 255, 0.2);
 }
