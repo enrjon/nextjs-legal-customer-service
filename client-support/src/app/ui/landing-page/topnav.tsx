@@ -22,7 +22,18 @@ export default function TopNav() {
 
 
     return (
-        <nav className="flex flex-col justify-between bg-white gap-[16px] px-[20px] py-[10px]">
+        <div>
+            <Link href={'/try-for-free'}
+                            className="btn text-sub2 font-bold flex justify-center w-full gap-[10px] px-[24px] py-[24px] lg:hidden">
+                            Try for free 
+                            <Image
+                                src='/images/try-arrow.svg'
+                                width={14}
+                                height={10}
+                                alt="arrow pointing right"
+                            ></Image>
+                        </Link>
+            <nav className="flex flex-col justify-between bg-white gap-[16px] px-[20px] py-[10px]">            
             <div className="hidden flex lg:inline-flex justify-end gap-[32px]">
                 <Link href={''} className="" style={{color: "rgba(153, 153, 153, 1);"}}>Support</Link>
                 <Link href={''}>(631) 686-9700</Link>
@@ -100,5 +111,7 @@ export default function TopNav() {
             </div>
 
         </nav>
+        </div>
+        
     )
 }
