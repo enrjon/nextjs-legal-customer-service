@@ -18,7 +18,7 @@ export default function Form() {
         'cell-phone': '',
     })
     const [submit, setSubmit] = useState(false);
-    const handleChange = (e) => {
+    const handleChange = () => {
         const { name, value } = e.target;
 
         setForm({ ...form, [name]: value })
