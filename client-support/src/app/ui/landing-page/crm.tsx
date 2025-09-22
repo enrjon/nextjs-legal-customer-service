@@ -14,7 +14,7 @@ export default function CRM() {
                     width={534}
                     height={453}
                     alt="image of CRM messaging being utilized."
-                    className="min-w-[364px] max-w-[534px]"
+                    className=""
                     style={{
                         objectFit: 'contain'
                     }}
