@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function CRM() {
     const crmList = [
-        'Answering Legal’s receptionists take down exactly the information you need.',
+        'Legal Support’s receptionists take down exactly the information you need.',
         'Through native API integrations with our proprietary software, we make sure it’s immediately where you need it to be.',
         'All you’ll have to do is open your CRM and follow up to secure your new client’s business.',
     ]

@@ -20,7 +20,7 @@ export default function TopNav() {
             <nav className="flex flex-col justify-between bg-white gap-[16px] px-[20px] py-[10px]">            
             <div className="hidden flex lg:inline-flex justify-end gap-[32px]">
                 <Link href={''} className="gray-text underline">Support</Link>
-                <Link href={''}>(631) 686-9700</Link>
+                <Link href={''}>(888) 888-8888</Link>
             </div>
             <div className="flex justify-between ">
                 <Image

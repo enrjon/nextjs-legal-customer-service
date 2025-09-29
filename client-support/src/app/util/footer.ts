@@ -38,7 +38,7 @@ export const footer = [
                 { name: 'Videos', link: 'videos' },
                 { name: "Let's Talk Legal", link: 'lets-talk-legal' },
                 { name: 'Marketing', link: 'marketing' },
-                { name: 'The Answering Legal', link: 'the-answering-legal' },
+                { name: 'The Legal Support', link: 'the-legal-support' },
                 { name: 'Book Club', link: 'book-club' },
                 { name: 'Top Legal Softwares', link: 'top-legal-softwares' }
             ],

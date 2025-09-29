@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className="flex flex-col gap-[32px] lg:gap-[45px] px-[16px] py-[72px] lg:px-[106px] py-[100px] items-center">
             <div className="flex flex-col gap-[13px]">
-                <h3 className="text-h3 font-bold text-center">Have questions? Our team is here to help. Call 631-400-8888</h3>
+                <h3 className="text-h3 font-bold text-center">Have questions? Our team is here to help. Call 888-888-8888</h3>
                 <p className="text-sm1 text-center text-blue-400 font-extrabold">Monday to Friday from 9 am to 7 pm EST.</p>
             </div>
             <div className="bg-blue-800 h-[2px] w-full"></div>
@@ -45,7 +45,7 @@ export default function Footer() {
                 }
             </div>
             <div className="bg-blue-800 h-[2px] w-full"></div>
-            <p>© 2024 Answering Legal · All Rights Reserved</p>
+            
         </footer>
     )
 }
