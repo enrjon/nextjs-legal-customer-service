@@ -20,7 +20,7 @@ export const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Answering Legal (Enrique Pinedo)",
+  title: "Legal Themed Customer Support Build (Enrique Pinedo)",
   description: "NextJS app written with Typescript and TailwindCSS",
 };
 
