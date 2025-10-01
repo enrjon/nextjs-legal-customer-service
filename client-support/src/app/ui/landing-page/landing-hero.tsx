@@ -37,7 +37,7 @@ export default function LandingHero() {
                     <h1 className="lg:order-1 text-h2 text-center lg:text-start font-bold lg:text-h1">We&apos;re more than an answering service</h1>
                     <p className="lg:order-2 text-sub2 text-center lg:text-start font-semibold">Legal Support has everything you need to make sure your firm never misses another opportunity.</p>
 
-                    <button className="lg:order-4 btn text-sub1 flex justify-center lg:self-start rounded-[12px] gap-[32px] py-[16px] px-[24px]">See our pricing</button>
+                    <button className="cursor-pointer lg:order-4 btn text-sub1 flex justify-center lg:self-start rounded-[12px] gap-[32px] py-[16px] px-[24px]">See our pricing</button>
                 </div>
 
             </div>

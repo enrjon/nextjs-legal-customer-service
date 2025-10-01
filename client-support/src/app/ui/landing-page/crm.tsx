@@ -46,7 +46,7 @@ export default function CRM() {
 
 
                     <div>
-                        <button className="btn px-[24px] py-[11px] text-sub1 gap-[10px] rounded-[12px]">See our Pricing</button>
+                        <button className="cursor-pointer btn px-[24px] py-[11px] text-sub1 gap-[10px] rounded-[12px]">See our Pricing</button>
                     </div>
 
                 </div>

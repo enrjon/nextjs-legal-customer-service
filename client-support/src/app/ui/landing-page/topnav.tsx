@@ -86,7 +86,7 @@ export default function TopNav() {
 
                     <button data-collapse-toggle="mobile-menu"
                         type="button"
-                        className="flex self-center p-[2px] text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        className="cursor-pointer flex self-center p-[2px] text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                         aria-controls="mobile-menu"
                         aria-expanded="true"
                         onClick={() => { setHamburger(!hamburger) }}>
@@ -100,10 +100,14 @@ export default function TopNav() {
                         ></Image>
                     </button>
                 </div>
-                <div className={`flex flex-col items-start lg:hidden gap-3 pb-2 ${!hamburger && 'hidden'}`}>
+                <div className={`flex flex-col items-start lg:hidden gap-[13px] pb-2 ${!hamburger && 'hidden'}`}>
                     {collapse.map((drop, i) => {
-                        return <li key={i}
-                            className="flex ps-4 font-bold hover:text-blue-500">{drop.label}</li>
+                        return <div key={i}
+                            className="cursor-pointer flex flex-col text-h3 ps-4 font-bold hover:text-blue-400 w-[100%] gap-[4px] hover:gap-[8px]">
+                            <li className="flex">{drop.label}</li>
+                            <div className="bg-stone-200 h-[2px] "></div>
+                        </div>
+
                     })}
                 </div>
             </nav>

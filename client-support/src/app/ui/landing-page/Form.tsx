@@ -111,7 +111,7 @@ export default function Form() {
                             )
                         })
                     }
-                    <button className="btn flex self-center rounded-[12px] text-h3 p-[16px]">See plans & pricing</button>
+                    <button className="cursor-pointer btn flex self-center rounded-[12px] text-h3 p-[16px]">See plans & pricing</button>
                 </form>
             </div>
 

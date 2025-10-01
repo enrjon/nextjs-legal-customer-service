@@ -13,7 +13,7 @@ export default function Blog() {
                         width={48}
                         height={48}
                         alt="left-arrow for carousel"
-                        className="rotate-180"
+                        className="cursor-pointer rotate-180"
                     ></Image>
                 </button>
                 <button>
@@ -22,6 +22,7 @@ export default function Blog() {
                         width={48}
                         height={48}
                         alt="right-arrow for carousel"
+                        className="cursor-pointer"
                     ></Image>
                 </button>
 
@@ -33,7 +34,7 @@ export default function Blog() {
                         width={48}
                         height={48}
                         alt="left-arrow for carousel"
-                        className="rotate-180  hidden lg:inline-flex"
+                        className="cursor-pointer rotate-180  hidden lg:inline-flex"
                     ></Image>
                 </button>
                 {
@@ -46,11 +47,12 @@ export default function Blog() {
                         src='/images/right-arrow.svg'
                         width={48}
                         height={48}
+                        className="cursor-pointer"
                         alt="right-arrow for carousel  hidden lg:inline-flex"
                     ></Image>
                 </button>
             </div>
-            <button className="btn text-sub1 rounded-[12px] px-[2px] py-[2px] w-[177px] h-[52px]">Go to blog</button>
+            <button className="cursor-pointer btn text-sub1 rounded-[12px] px-[2px] py-[2px] w-[177px] h-[52px]">Go to blog</button>
         </div>
 
     )
