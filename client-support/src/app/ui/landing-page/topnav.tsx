@@ -24,7 +24,7 @@ export default function TopNav() {
                     <Link href={''} className="gray-text underline">Support</Link>
                     <Link href={''}>(888) 888-8888</Link>
                 </div>
-                <div className="flex justify-between ">
+                <div className="flex justify-between">
                     <Image
                         src='/images/Answering_LegalTM_Blue.png'
                         width={293}
@@ -100,13 +100,10 @@ export default function TopNav() {
                         ></Image>
                     </button>
                 </div>
-                <div>
-
-                </div>
                 <div className={`flex flex-col items-start lg:hidden gap-3 pb-2 ${!hamburger && 'hidden'}`}>
                     {collapse.map((drop, i) => {
                         return <li key={i}
-                            className="flex ps-4 font-bold hover:selected">{drop.label}</li>
+                            className="flex ps-4 font-bold hover:text-blue-500">{drop.label}</li>
                     })}
                 </div>
             </nav>
