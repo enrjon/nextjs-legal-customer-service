@@ -38,7 +38,7 @@ export default function Blog() {
                 </button>
 
             </div>
-            <div id='blogSlide' className="flex flex-row justify-center ">
+            <div id='blogSlide' className="flex flex-row justify-center w-full">
                 <button>
                     <Image
                         src='/images/right-arrow.svg'
@@ -48,7 +48,7 @@ export default function Blog() {
                         className="cursor-pointer rotate-180  hidden lg:inline-flex"
                     ></Image>
                 </button>
-                <div className="flex gap-[24px] transition ">
+                <div className="flex gap-[24px] transition overflow-x-scroll">
                     {
                         blogFetch.map((data, i) => {
                             return <BlogCard key={`blog-card-${i}`} {...data} />
@@ -61,8 +61,8 @@ export default function Blog() {
                         src='/images/right-arrow.svg'
                         width={48}
                         height={48}
-                        className="cursor-pointer"
-                        alt="right-arrow for carousel  hidden lg:inline-flex"
+                        className="cursor-pointer hidden lg:inline-flex"
+                        alt="right-arrow for carousel"
                     ></Image>
                 </button>
             </div>
