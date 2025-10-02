@@ -10,7 +10,7 @@ import Footer from '../ui/landing-page/footer';
 export default function Page() {
     return (
         <main>
-            <div className="flex flex-col justify-center overflow-hidden">
+            <div className="flex flex-col self-center">
                 <TopNav />
                 <LandingHero />
                 <Cards />

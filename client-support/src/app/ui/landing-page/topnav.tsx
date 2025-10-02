@@ -103,7 +103,7 @@ export default function TopNav() {
                 <div className={`flex flex-col items-start lg:hidden gap-[13px] pb-2 ${!hamburger && 'hidden'}`}>
                     {collapse.map((drop, i) => {
                         return <div key={i}
-                            className="cursor-pointer flex flex-col text-h3 ps-4 font-bold hover:text-blue-400 w-[100%] gap-[4px] hover:gap-[8px]">
+                            className="cursor-pointer flex flex-col text-h3 ps-4 font-bold hover:text-blue-400 w-[100%] gap-[4px] transition hover:gap-[8px]">
                             <li className="flex">{drop.label}</li>
                             <div className="bg-stone-200 h-[2px] "></div>
                         </div>

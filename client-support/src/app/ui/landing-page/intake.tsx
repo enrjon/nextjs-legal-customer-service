@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Intake() {
     return (
         <div className="flex justify-center gap-[50px] p-[32px] lg:py-[64]">
-            <div className="flex flex-col-reverse items-center md:flex-row gap-[32px]">
+            <div className="flex flex-col-reverse items-center lg:flex-row gap-[32px]">
                 <div className="flex flex-col max-w-[534px]">
                     <div className="flex flex-col gap-[32px] py-[32px]">
                         <h3 className="text-h2 font-bold">Design your perfect legal intake process</h3>

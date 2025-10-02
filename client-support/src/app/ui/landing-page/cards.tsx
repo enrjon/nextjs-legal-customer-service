@@ -22,7 +22,7 @@ export default function Cards() {
     return (
         <div className="flex justify-center flex-col gap-[36px]">
             <div className="flex flex-col gap-[24px] p-[80px] items-center">
-                <h3 className="text-h3 font-bold flex text-center md:text-white">Here{`'`}s what we can do for your law firm</h3>
+                <h3 className="text-h3 font-bold flex text-center lg:text-white">Here{`'`}s what we can do for your law firm</h3>
                 <div className="w-full divider h-[2px]"></div>
             </div>
 

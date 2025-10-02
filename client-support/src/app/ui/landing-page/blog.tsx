@@ -1,13 +1,24 @@
+'use client'
+
 import BlogCard from "@/app/components/blog-card"
 import Image from "next/image"
 import { blogFetch } from "@/app/util/blog"
+import { useState } from "react"
 
 export default function Blog() {
+    const [blogPos, setBlogPos] = useState(0);
+
+    const blogSlide = () => {
+        const blog = document.getElementById('blogSlide');
+    }
+
     return (
         <div className="bg-white flex flex-col items-center gap-[32px] px-[16px] py-[64px]">
             <h2 className="text-h3 font-bold text-center">Want to learn more? Read our articles on legal intake.</h2>
             <div className="flex gap-[64px] lg:hidden">
-                <button>
+                <button
+                    onClick={() => { blogSlide() }}
+                >
                     <Image
                         src='/images/right-arrow.svg'
                         width={48}
@@ -27,7 +38,7 @@ export default function Blog() {
                 </button>
 
             </div>
-            <div className="flex flex-row justify-center gap-[24px]">
+            <div id='blogSlide' className="flex flex-row justify-center ">
                 <button>
                     <Image
                         src='/images/right-arrow.svg'
@@ -37,11 +48,14 @@ export default function Blog() {
                         className="cursor-pointer rotate-180  hidden lg:inline-flex"
                     ></Image>
                 </button>
-                {
-                    blogFetch.map((data, i) => {
-                        return <BlogCard key={`blog-card-${i}`} {...data} />
-                    })
-                }
+                <div className="flex gap-[24px] transition ">
+                    {
+                        blogFetch.map((data, i) => {
+                            return <BlogCard key={`blog-card-${i}`} {...data} />
+                        })
+                    }
+                </div>
+
                 <button>
                     <Image
                         src='/images/right-arrow.svg'

@@ -1,5 +1,5 @@
 // Simulates a fetch to the blog API
-export const blogFetch = Array(3).fill({
+export const blogFetch = Array(5).fill({
   section: "LAWYER WELLNESS",
   date: "June 6, 2024",
   title: "How Viable Is Remote Work For Lawyers?",
