@@ -4,14 +4,14 @@ import { Blog } from "../util/blog"
 
 export default function BlogCard(blogData: Blog) {
     return (
-        <div>
+        <div className="snap-center">
             <div className="card gap-[8px] p-[16px]">
                 <Image
                     src={blogData.img}
                     width={320}
                     height={193}
                     alt="Man talking on phone"
-                    className="rounded-[20px]"
+                    className="rounded-[20px] "
                     style={{
                         objectFit: 'contain'
                     }}

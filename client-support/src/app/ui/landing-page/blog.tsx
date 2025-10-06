@@ -6,7 +6,7 @@ import { blogFetch } from "@/app/util/blog"
 import { useState } from "react"
 
 export default function Blog() {
-    const [blogPos, setBlogPos] = useState(0);
+    const [blogPos, setBlogPos] = useState(1000);
 
     const blogSlide = () => {
         const blog = document.getElementById('blogSlide');
@@ -48,7 +48,7 @@ export default function Blog() {
                         className="cursor-pointer rotate-180  hidden lg:inline-flex"
                     ></Image>
                 </button>
-                <div className="flex gap-[24px] transition overflow-x-scroll">
+                <div className="flex gap-[24px] transition overflow-x-scroll snap-x snap-mandatory pb-2" aria-valuenow={100}>
                     {
                         blogFetch.map((data, i) => {
                             return <BlogCard key={`blog-card-${i}`} {...data} />
